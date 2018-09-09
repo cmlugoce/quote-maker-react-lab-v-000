@@ -25,6 +25,7 @@ const QuoteCard = (props) =>
             Downvote
           </button>
           <button
+             onClick = {() => props.removeQuote(props.quoteInfo.id)}
             type="button"
             className="btn btn-danger"
           >
