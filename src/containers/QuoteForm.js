@@ -62,7 +62,9 @@ class QuoteForm extends Component {
                       <input
                         className="form-control"
                         type="text"
+                          name = "author"
                         value={this.state.author}
+                         onChange = {(event) => this.handleOnChange(event)}
                       />
                     </div>
                   </div>
@@ -82,4 +84,4 @@ class QuoteForm extends Component {
 }
 
 //add arguments to connect as needed
-export default connect()(QuoteForm);
+export default connect((state => ({quotes: state.quotes}), {addQuote})(QuoteForm);
